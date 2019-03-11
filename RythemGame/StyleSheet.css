@@ -1,0 +1,15 @@
+﻿.logoPage{
+    display:flex;
+}
+.tutorialPage{
+    display:none;
+}
+.levelsPage{
+    display:none;
+}
+.winPage{
+    display:none;
+}
+.gameOverScreen{
+    display:none;
+}
