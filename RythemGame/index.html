@@ -7,13 +7,17 @@
     <script src="JavaScript.js"></script>
 </head>
 <body>
-    <div class="container"onkeydown="Spacebar()">
+    <div class="container">
         <div class="logoPage">
             <button id="logoPage" onclick="StartGame()">1</button>
         </div>
 
-        <div class="tutorialPage" id="tutorialPage">
-            <button id="timerButton">2</button>
+        <div class="tutorialPage" id="tutorialPage" onkeydown="Spacebar()">
+            <button id="timerButton" onclick="MyMove()">Click Here to begin</button>
+            <div id="animationContainer">
+                <div id="animation">animation</div>
+            </div>
+            
         </div>
 
         <!--<div class="levelsPage" id="levelsPage">

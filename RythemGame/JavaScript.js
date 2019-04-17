@@ -4,6 +4,7 @@
 var pageIdOne;
 var pageIdTwo;
 
+//first input is the one turning to none, second is becoming visible
 function PageSwitcher(pageIdOne, pageIdTwo) {
     var x = document.getElementById(pageIdOne);
     var y = document.getElementById(pageIdTwo);
@@ -11,13 +12,14 @@ function PageSwitcher(pageIdOne, pageIdTwo) {
     y.style.display = "flex";
 }
 
-
+//------------------------------
 
 //switch from logo page to the tutorial page
 function StartGame() {
     PageSwitcher("logoPage", "tutorialPage");
 }
 
+//------------------------------
 
 // timer buttons
 var timers =true;
@@ -28,7 +30,7 @@ var timeDifference;
 
 
 function Timer() {
-    timeDifferenceCounters++;
+    timeDifferenceCounters++;//counter
 
     if (timers === true) {
         timeOne = new Date().getSeconds();
@@ -54,4 +56,28 @@ function Spacebar() {
 
     else if (x.style.backgroundColor === "red")
         x.style.backgroundColor = "blue";
+}
+
+
+//------------------------------
+
+
+
+function MyMove() {
+    var elem = document.getElementById("animation");
+    var pos = 0;
+    var id = setInterval(frame, 5);
+
+
+    function frame() {
+        if (pos === 350) {
+            clearInterval(id);
+        }
+        else {
+            pos++;
+            elem.style.left = pos + "px";
+        }
+
+    }
+    console.log("working");
 }
